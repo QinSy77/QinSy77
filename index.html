@@ -1,0 +1,520 @@
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>同济数学计算研究室 - 实验室成果展示</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        secondary: '#0F766E',
+                        dark: '#1E293B',
+                        tongji: '#C91F37', // 同济红
+                        math: '#0369A1',   // 数学蓝
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Georgia', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s ease;
+            }
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            }
+            .publication-badge {
+                @apply inline-block px-2 py-1 text-xs font-semibold rounded-full bg-blue-100 text-blue-800 mr-2;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-tongji">同济数学计算研究室</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#team" class="hover:text-tongji transition-custom">研究团队</a>
+                <a href="#research" class="hover:text-tongji transition-custom">研究领域</a>
+                <a href="#achievements" class="hover:text-tongji transition-custom">成果展示</a>
+                <a href="#projects" class="hover:text-tongji transition-custom">项目</a>
+                <a href="#publications" class="hover:text-tongji transition-custom">发表论文</a>
+                <a href="#contact" class="hover:text-tongji transition-custom">联系我们</a>
+            </div>
+            <button class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <header class="pt-24 pb-16 bg-gradient-to-br from-blue-50 to-sky-50">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-shadow">
+                    <span class="text-tongji">同济数学</span> 计算研究室
+                </h1>
+                <p class="text-lg text-gray-600 mb-6">
+                    专注于数值计算、科学计算与数学建模研究，推动数学理论在工程与科学领域的应用
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#achievements" class="bg-tongji hover:bg-tongji/90 text-white px-6 py-2 rounded-lg transition-custom">
+                        查看研究成果
+                    </a>
+                    <a href="https://github.com/团队用户名" target="_blank" class="border border-gray-300 hover:border-tongji hover:text-tongji px-6 py-2 rounded-lg transition-custom">
+                        <i class="fa fa-github mr-2"></i>实验室 GitHub
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://picsum.photos/seed/mathlab/600/400" alt="数学计算实验室环境" class="w-80 h-64 rounded-lg object-cover shadow-lg border-4 border-white">
+            </div>
+        </div>
+    </header>
+
+    <!-- 团队成员 -->
+    <section id="team" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">研究团队</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 成员 1 -->
+                <div class="text-center">
+                    <img src="https://picsum.photos/seed/leader/200/200" alt="团队负责人" class="w-40 h-40 rounded-full object-cover shadow-md mx-auto mb-4 border-2 border-tongji">
+                    <h3 class="text-xl font-semibold mb-1">张明</h3>
+                    <p class="text-tongji mb-2">研究室主任</p>
+                    <p class="text-gray-600 text-sm">教授，博士生导师，研究方向：数值分析与科学计算</p>
+                    <div class="mt-3 flex justify-center space-x-3">
+                        <a href="#" class="text-gray-500 hover:text-tongji"><i class="fa fa-github"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-tongji"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-tongji"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <!-- 成员 2 -->
+                <div class="text-center">
+                    <img src="https://picsum.photos/seed/member1/200/200" alt="团队成员" class="w-40 h-40 rounded-full object-cover shadow-md mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-1">李华</h3>
+                    <p class="text-tongji mb-2">副教授</p>
+                    <p class="text-gray-600 text-sm">研究方向：偏微分方程数值解法</p>
+                    <div class="mt-3 flex justify-center space-x-3">
+                        <a href="#" class="text-gray-500 hover:text-tongji"><i class="fa fa-github"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-tongji"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-tongji"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <!-- 成员 3 -->
+                <div class="text-center">
+                    <img src="https://picsum.photos/seed/member2/200/200" alt="团队成员" class="w-40 h-40 rounded-full object-cover shadow-md mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-1">王芳</h3>
+                    <p class="text-tongji mb-2">研究员</p>
+                    <p class="text-gray-600 text-sm">研究方向：计算流体力学与数值模拟</p>
+                    <div class="mt-3 flex justify-center space-x-3">
+                        <a href="#" class="text-gray-500 hover:text-tongji"><i class="fa fa-github"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-tongji"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-tongji"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <!-- 成员 4 -->
+                <div class="text-center">
+                    <img src="https://picsum.photos/seed/member3/200/200" alt="团队成员" class="w-40 h-40 rounded-full object-cover shadow-md mx-auto mb-4">
+                    <h3 class="text-xl font-semibold mb-1">赵强</h3>
+                    <p class="text-tongji mb-2">助理研究员</p>
+                    <p class="text-gray-600 text-sm">研究方向：高性能计算与并行算法</p>
+                    <div class="mt-3 flex justify-center space-x-3">
+                        <a href="#" class="text-gray-500 hover:text-tongji"><i class="fa fa-github"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-tongji"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-tongji"><i class="fa fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto mt-12">
+                <h3 class="text-2xl font-semibold mb-4 text-center">关于我们的研究室</h3>
+                <p class="text-lg mb-4 text-center">
+                    同济数学计算研究室隶属于同济大学数学科学学院，专注于计算数学及相关领域的基础与应用研究。
+                </p>
+                <p class="text-lg text-center">
+                    研究室团队由教授、副教授、博士后和研究生组成，致力于发展高效数值算法并解决工程与科学领域中的复杂问题。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 研究领域 -->
+    <section id="research" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">研究领域</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover border-t-4 border-tongji">
+                    <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-calculator text-2xl text-tongji"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">数值分析与算法</h3>
+                    <p class="text-gray-600">
+                        研究数值逼近、数值代数、微分方程数值解法等基础理论与高效算法，推动计算数学的理论发展。
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover border-t-4 border-tongji">
+                    <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-cogs text-2xl text-tongji"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">科学与工程计算</h3>
+                    <p class="text-gray-600">
+                        针对物理、力学、工程等领域的实际问题，发展先进的数值模拟方法与计算工具。
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md card-hover border-t-4 border-tongji">
+                    <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-server text-2xl text-tongji"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">高性能计算</h3>
+                    <p class="text-gray-600">
+                        研究并行算法设计、分布式计算、GPU加速等技术，实现大规模科学计算的高效求解。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 成果展示 -->
+    <section id="achievements" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">研究成果展示</h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
+                <!-- 成果 1 -->
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="md:w-2/5">
+                        <img src="https://picsum.photos/seed/achievement1/400/300" alt="数值算法成果" class="w-full h-64 object-cover rounded-lg shadow-md">
+                    </div>
+                    <div class="md:w-3/5">
+                        <div class="flex items-center mb-2">
+                            <span class="publication-badge">数值分析</span>
+                            <span class="publication-badge">算法优化</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3">高效稀疏矩阵求解算法研究</h3>
+                        <p class="text-gray-600 mb-4">
+                            提出了一种新型预处理技术，显著提高了大规模稀疏线性方程组的求解效率，在工程模拟中计算速度提升3-5倍。
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="mr-4"><i class="fa fa-calendar mr-1"></i> 2023年</span>
+                            <span><i class="fa fa-users mr-1"></i> 张明团队</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 成果 2 -->
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="md:w-2/5">
+                        <img src="https://picsum.photos/seed/achievement2/400/300" alt="科学计算平台" class="w-full h-64 object-cover rounded-lg shadow-md">
+                    </div>
+                    <div class="md:w-3/5">
+                        <div class="flex items-center mb-2">
+                            <span class="publication-badge">科学计算</span>
+                            <span class="publication-badge">软件平台</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3">多物理场耦合数值模拟平台</h3>
+                        <p class="text-gray-600 mb-4">
+                            开发了一套适用于复杂工程问题的多物理场耦合模拟平台，已应用于桥梁结构分析、流体-结构相互作用研究等领域。
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="mr-4"><i class="fa fa-calendar mr-1"></i> 2022年</span>
+                            <span><i class="fa fa-users mr-1"></i> 李华团队</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 成果 3 -->
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="md:w-2/5">
+                        <img src="https://picsum.photos/seed/achievement3/400/300" alt="高性能计算成果" class="w-full h-64 object-cover rounded-lg shadow-md">
+                    </div>
+                    <div class="md:w-3/5">
+                        <div class="flex items-center mb-2">
+                            <span class="publication-badge">高性能计算</span>
+                            <span class="publication-badge">并行算法</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3">基于GPU的大规模并行计算框架</h3>
+                        <p class="text-gray-600 mb-4">
+                            设计了面向GPU集群的并行计算框架，实现了千万级自由度问题的高效求解，获2022年度高校科学技术奖。
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="mr-4"><i class="fa fa-calendar mr-1"></i> 2021年</span>
+                            <span><i class="fa fa-users mr-1"></i> 赵强团队</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 成果 4 -->
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="md:w-2/5">
+                        <img src="https://picsum.photos/seed/achievement4/400/300" alt="工程应用成果" class="w-full h-64 object-cover rounded-lg shadow-md">
+                    </div>
+                    <div class="md:w-3/5">
+                        <div class="flex items-center mb-2">
+                            <span class="publication-badge">工程应用</span>
+                            <span class="publication-badge">数值模拟</span>
+                        </div>
+                        <h3 class="text-2xl font-semibold mb-3">复杂流体运动的自适应数值模拟方法</h3>
+                        <p class="text-gray-600 mb-4">
+                            提出了基于自适应网格技术的复杂流体运动模拟方法，在海洋工程、环境流体力学等领域得到成功应用。
+                        </p>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <span class="mr-4"><i class="fa fa-calendar mr-1"></i> 2022年</span>
+                            <span><i class="fa fa-users mr-1"></i> 王芳团队</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示 -->
+    <section id="projects" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">科研项目</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- 项目 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="p-1 bg-gradient-to-r from-red-500 to-tongji"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded mr-2">国家自然科学基金</span>
+                            <span class="text-sm text-gray-500">2023-2026</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">基于深度学习的自适应数值算法研究</h3>
+                        <p class="text-gray-600 mb-4">
+                            将深度学习与传统数值方法相结合，研究新一代自适应数值算法，提高复杂问题的求解效率与精度。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-gray-700">负责人：张明</span>
+                            <span class="text-sm font-semibold text-red-600">经费：72万元</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 项目 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="p-1 bg-gradient-to-r from-red-500 to-tongji"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded mr-2">省部级项目</span>
+                            <span class="text-sm text-gray-500">2022-2024</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">大型工程结构的高效数值模拟方法</h3>
+                        <p class="text-gray-600 mb-4">
+                            研究适用于大型工程结构分析的高效数值模拟方法与软件实现，为重大工程设计提供理论支持。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-gray-700">负责人：李华</span>
+                            <span class="text-sm font-semibold text-red-600">经费：40万元</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 项目 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover">
+                    <div class="p-1 bg-gradient-to-r from-red-500 to-tongji"></div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-3">
+                            <span class="bg-red-100 text-red-800 text-xs font-semibold px-2.5 py-0.5 rounded mr-2">企业合作项目</span>
+                            <span class="text-sm text-gray-500">2021-2023</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">海洋工程中的多物理场耦合计算平台开发</h3>
+                        <p class="text-gray-600 mb-4">
+                            与海洋工程企业合作，开发适用于海洋结构物分析的多物理场耦合计算平台，解决工程实际问题。
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-medium text-gray-700">负责人：王芳</span>
+                            <span class="text-sm font-semibold text-red-600">经费：150万元</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 发表论文 -->
+    <section id="publications" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">发表论文</h2>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex flex-wrap items-start mb-2">
+                        <span class="publication-badge">SCI一区</span>
+                        <span class="publication-badge">计算数学</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">
+                        <a href="#" class="text-tongji hover:underline">A Fast Adaptive Algorithm for Sparse Matrix Computations</a>
+                    </h3>
+                    <p class="text-gray-600 mb-2">
+                        张明, 李华, 王芳, 等.
+                    </p>
+                    <p class="text-gray-500 text-sm">
+                        SIAM Journal on Scientific Computing, 2023, 45(2): A567-A589.
+                    </p>
+                </div>
+                
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex flex-wrap items-start mb-2">
+                        <span class="publication-badge">SCI一区</span>
+                        <span class="publication-badge">工程计算</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">
+                        <a href="#" class="text-tongji hover:underline">Multi-physics Simulation of Complex Engineering Structures</a>
+                    </h3>
+                    <p class="text-gray-600 mb-2">
+                        李华, 赵强, 张明, 等.
+                    </p>
+                    <p class="text-gray-500 text-sm">
+                        Computer Methods in Applied Mechanics and Engineering, 2022, 395: 114123.
+                    </p>
+                </div>
+                
+                <div class="mb-6 pb-6 border-b border-gray-200">
+                    <div class="flex flex-wrap items-start mb-2">
+                        <span class="publication-badge">SCI二区</span>
+                        <span class="publication-badge">高性能计算</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">
+                        <a href="#" class="text-tongji hover:underline">GPU-accelerated Parallel Algorithms for Large-scale CFD Simulations</a>
+                    </h3>
+                    <p class="text-gray-600 mb-2">
+                        赵强, 王芳, 等.
+                    </p>
+                    <p class="text-gray-500 text-sm">
+                        Parallel Computing, 2021, 108: 102834.
+                    </p>
+                </div>
+                
+                <div>
+                    <div class="flex flex-wrap items-start mb-2">
+                        <span class="publication-badge">SCI一区</span>
+                        <span class="publication-badge">流体力学</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">
+                        <a href="#" class="text-tongji hover:underline">Adaptive Mesh Methods for Complex Fluid Flow Simulations</a>
+                    </h3>
+                    <p class="text-gray-600 mb-2">
+                        王芳, 张明, 赵强, 等.
+                    </p>
+                    <p class="text-gray-500 text-sm">
+                        Journal of Computational Physics, 2021, 435: 110278.
+                    </p>
+                </div>
+                
+                <div class="mt-8 text-center">
+                    <a href="#" class="inline-flex items-center text-tongji font-medium hover:underline">
+                        查看更多论文 <i class="fa fa-angle-right ml-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">联系我们</h2>
+            <div class="max-w-5xl mx-auto">
+                <div class="bg-white rounded-lg shadow-md p-8 mx-auto max-w-2xl">
+                    <h3 class="text-xl font-semibold mb-6">研究室信息</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fa fa-map-marker text-tongji text-xl mt-1 w-6"></i>
+                            <span class="ml-3">上海市杨浦区四平路1239号数学科学学院</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-phone text-tongji text-xl w-6"></i>
+                            <span class="ml-3">021-6598XXXX</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-envelope text-tongji text-xl w-6"></i>
+                            <span class="ml-3">mathcomp@tongji.edu.cn</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa fa-globe text-tongji text-xl w-6"></i>
+                            <a href="#" class="ml-3 text-tongji hover:underline">math.tongji.edu.cn/lab</a>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-medium mb-3">关注我们</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-tongji hover:bg-red-200 transition-custom">
+                                <i class="fa fa-weixin"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-tongji hover:bg-red-200 transition-custom">
+                                <i class="fa fa-weibo"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-tongji hover:bg-red-200 transition-custom">
+                                <i class="fa fa-github"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-tongji hover:bg-red-200 transition-custom">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 同济数学计算研究室 - 版权所有</p>
+            <p class="mt-2 text-gray-400">地址：上海市杨浦区四平路1239号数学科学学院 | 电话：021-6598XXXX</p>
+            <p class="mt-1 text-gray-400">依托同济大学数学科学学院建立 | 使用 GitHub Pages 构建</p>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow-lg');
+                nav.classList.remove('py-3', 'shadow-md');
+            } else {
+                nav.classList.add('py-3', 'shadow-md');
+                nav.classList.remove('py-2', 'shadow-lg');
+            }
+        });
+    </script>
+
+
+</body></html>
